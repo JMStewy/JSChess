@@ -13,7 +13,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
     <script src="js/namespace.js"></script>
     <script src="js/Chess/Game.js"></script>
+    <script src="js/Chess/Board.js"></script>
+    <script src="js/Chess/Piece.js"></script>
+    <script src="js/Chess/Square.js"></script>
+    <script src="js/Chess/Player.js"></script>
 
+    <script src="js/Render/Order.js"></script>
     <script src="js/application.js"></script>
 </head>
 <body>
@@ -23,7 +28,18 @@
 <![endif]-->
 
 <div ng-controller='IndexController'>
-    {{ greeting }}
+    <div ng-repeat='(k, rank) in order.rows'>
+        <div ng-repeat='(j, file) in order.columns' style='
+            border: 1px solid black;
+            padding: 25px;
+            height: 20px;
+            width: 20px;
+            display: inline-block;
+        '>
+            {{ game.board.squares[file][rank].name }}
+        </div>
+        <br>
+    </div>
 </div>
 
 </body>
