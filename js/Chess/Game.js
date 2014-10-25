@@ -1,7 +1,14 @@
 Chess.Game = function() {
-    this.board = new Chess.Board()
+    this.init();
 };
 
 Chess.Game.prototype = {
+    init : function() {
+        this.board = new Board();
+    },
+    currentPlayer : function() {},
+    newGame : function(board) {
+
+    }
 
 };

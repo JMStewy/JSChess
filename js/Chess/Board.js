@@ -18,5 +18,13 @@ Chess.Board.prototype = {
                 this.squares[file][rank] = square;
             }
         }
+    },
+
+    setLocation: function(piece,square) {
+        piece.position = square;
+    },
+
+    inCheck : function(player) {
+
     }
 };
